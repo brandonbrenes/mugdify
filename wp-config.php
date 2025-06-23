@@ -13,7 +13,8 @@
  */
 if (file_exists(dirname(__FILE__) . '/wp-config-pantheon.php') && isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 	require_once(dirname(__FILE__) . '/wp-config-pantheon.php');
-
+} elseif (getenv('IS_DDEV_PROJECT') === 'true' && file_exists(__DIR__ . '/wp-config-ddev.php')) {
+  require_once(__DIR__ . '/wp-config-ddev.php');
 /**
  * Local configuration information.
  *

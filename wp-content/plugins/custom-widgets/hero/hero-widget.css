@@ -1,0 +1,61 @@
+.custom-hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Las imágenes ya no necesitan estar absolutas */
+.hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-image.desktop {
+    display: block;
+}
+
+.hero-image.mobile {
+    display: none;
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(165, 94, 28, 0.9);
+    color: #fffbe3;
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 500px;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Móvil */
+@media screen and (max-width: 1168px) {
+    .custom-hero{
+        height: 100vh;
+    }
+
+    .hero-image.desktop {
+        display: none;
+    }
+
+    .hero-image.mobile {
+        display: block;
+    }
+
+    .hero-content {
+        top: 5%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transform: none;
+        text-align: center;
+    }
+}

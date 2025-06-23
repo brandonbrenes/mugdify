@@ -1,0 +1,110 @@
+:root {
+    --color-primary: deeppink;
+    --color-secundary: antiquewhite;
+}
+
+/* ----------- HEADER ----------- */
+
+header {
+    background-color: var(--color-secundary);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul .menu-item a {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: filter 0.3s ease;
+}
+
+header nav ul .menu-item a:hover {
+    filter: brightness(70%);
+}
+
+header .custom-logo-link img {
+    height: 90px;
+    width: auto;
+}
+
+/* ----------- FOOTER ----------- */
+
+.custom-footer {
+    width: 100%;
+    background-color: var(--color-secundary);
+    color: var(--color-primary);
+    padding: 2rem 4rem;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* O evenly si querés espacios iguales */
+    gap: 4rem;
+    width: 100%;
+}
+
+
+.footer-section {
+    list-style: none;
+}
+
+.footer-section h4 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.footer-menu {
+    padding: 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.footer-section ul li a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    filter: brightness(70%);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    padding-top: 1rem;
+}
+
+.footer-logo {
+    width: 7rem;
+}

@@ -1,0 +1,54 @@
+.faq-accordion {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 1em 0;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ccc;
+}
+
+.faq-question {
+    padding: 1em;
+    background-color: #f7f7f7;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+}
+
+.faq-question:hover {
+    background-color: #eaeaea;
+}
+
+/* Estilo de la flecha ▼ */
+.faq-icon {
+    color: grey;
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    transition: transform 0.3s ease;
+}
+
+/* Rota la flecha cuando el item está activo */
+.faq-item.active .faq-icon {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-answer-wrapper {
+    overflow: hidden;
+    height: 0;
+    transition: height 300ms ease-in-out;
+}
+
+.faq-item.active .faq-question {
+    background-color: var(--color-secundary);;
+}
+
+.faq-answer {
+    padding: 1em;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
