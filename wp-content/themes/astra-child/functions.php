@@ -41,7 +41,7 @@ function astra_child_enqueue_styles() {
     if (is_page_template('about-us-template.php')) {
         wp_enqueue_style(
             'astra-about-style',
-            get_stylesheet_directory_uri() . '/assets/css/professional-profile.css',
+            get_stylesheet_directory_uri() . '/assets/css/about-us.css',
             ['astra-parent-style']
         );
     }
