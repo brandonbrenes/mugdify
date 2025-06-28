@@ -21,6 +21,51 @@ body {
     display: none;
 }
 
+/* ==================================== */
+/* Estilos para títulos con color accent */
+/* ==================================== */
+
+/* Títulos principales en todas las páginas */
+.entry-title,
+h1.entry-title,
+.ast-archive-title,
+.ast-single-post .entry-title,
+.page-title {
+    color: var(--color-accent) !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+/* Títulos en WooCommerce */
+.woocommerce-products-header__title.page-title {
+    color: var(--color-accent) !important;
+    background: transparent !important;
+}
+
+/* Hero sections */
+.ast-hero-title {
+    color: var(--color-accent) !important;
+    background: transparent !important;
+}
+
+/* Títulos en páginas individuales */
+.ast-single-post .entry-header .entry-title,
+.page .entry-header .entry-title {
+    color: var(--color-accent) !important;
+    border-bottom: none !important;
+}
+
+/* Quitar cualquier sombra o efecto en títulos */
+.entry-title:before,
+.entry-title:after,
+.ast-single-post .entry-header:before,
+.ast-single-post .entry-header:after {
+    display: none !important;
+}
+
 p {
     margin: 0rem;
     color: var(--color-primary);
