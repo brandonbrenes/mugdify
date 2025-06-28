@@ -49,6 +49,10 @@
   font-weight: 500;
 }
 
+.hero-button{
+    padding: 3rem 1rem;
+}
+
 
 
 @media screen and (max-width: 1325px) {
