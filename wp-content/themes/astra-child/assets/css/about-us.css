@@ -1,9 +1,4 @@
 /* Estilos generales */
-.about-mugdify {
-    color: var(--color-secundary);
-    line-height: 1.6;
-}
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -21,11 +16,13 @@
 .mugdify-hero h1 {
     font-size: 3rem;
     margin-bottom: 15px;
+    color: var(--color-accent);
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
     opacity: 0.9;
+    color: var(--color-accent);
 }
 
 /* Quienes Somos */
