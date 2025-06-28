@@ -1,0 +1,215 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.mugdify-hero {
+    background: linear-gradient(135deg, #6e48aa, #9d50bb);
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.mugdify-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+/* Nuestra Historia */
+.our-story {
+    padding: 60px 0;
+    background: #f9f9f9;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+}
+
+.story-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.story-text {
+    flex: 1;
+    font-size: 1.1rem;
+}
+
+.story-text p {
+    margin-bottom: 20px;
+}
+
+.story-image {
+    flex: 1;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Misión, Visión y Valores */
+.mission-section {
+    padding: 60px 0;
+    background: white;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.mission-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+}
+
+.mission-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.mission-card h3 {
+    color: #6e48aa;
+    margin-bottom: 15px;
+}
+
+.mission-card ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.mission-card li {
+    margin-bottom: 8px;
+}
+
+/* Proceso */
+.process-section {
+    padding: 60px 0;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.process-section h2 {
+    margin-bottom: 50px;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.step {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.step-number {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #6e48aa;
+    color: white;
+    border-radius: 50%;
+    line-height: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.step h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Equipo */
+.team-section {
+    padding: 60px 0;
+    background: white;
+    text-align: center;
+}
+
+.team-section h2 {
+    margin-bottom: 40px;
+}
+
+.team-member {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.member-image {
+    flex: 0 0 250px;
+}
+
+.member-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.member-info h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.position {
+    color: #6e48aa;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .story-content {
+        flex-direction: column;
+    }
+    
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .member-image {
+        margin-bottom: 20px;
+    }
+}
