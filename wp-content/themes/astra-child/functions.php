@@ -60,3 +60,32 @@ function astra_child_theme_menus() {
     );
 }
 add_action('after_setup_theme', 'astra_child_theme_menus');
+
+// personalización para la imagen del perfíl profesional
+function professional_profile_customize_register($wp_customize) {
+    // Añadir sección
+    $wp_customize->add_section('professional_profile_section', array(
+        'title'    => __('Imagen de Perfil Profesional', 'text-domain'),
+        'priority' => 30,
+    ));
+
+    // Añadir setting para la imagen
+    $wp_customize->add_setting('professional_profile_image', array(
+        'default'   => '',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+
+    // Añadir control para la imagen
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+        $wp_customize,
+        'professional_profile_image_control',
+        array(
+            'label'       => __('Subir Imagen de Perfil', 'text-domain'),
+            'description' => __('Se recomienda una imagen cuadrada de al menos 400x400px', 'text-domain'),
+            'section'     => 'professional_profile_section',
+            'settings'    => 'professional_profile_image',
+        )
+    ));
+}
+add_action('customize_register', 'professional_profile_customize_register');
