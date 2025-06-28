@@ -195,3 +195,16 @@ input[type="submit"]:hover,
     color: var(--color-secundary);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra suave */
 }
+
+/*productos de woocomerse en home*/
+@media (max-width: 768px) {
+  ul.products.columns-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  ul.products.columns-3 {
+    grid-template-columns: 1fr !important;
+  }
+}
