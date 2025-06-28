@@ -189,6 +189,20 @@ function guardar_valoracion_opinion( $post_id ) {
 }
 add_action( 'save_post', 'guardar_valoracion_opinion' );
 
+function astra_child_custom_title_styles() {
+    // Asegurar que los títulos usen tu variable de color
+    wp_add_inline_style('astra-theme-css', '
+        :root {
+            --ast-global-color-2: var(--color-accent);
+            --ast-title-color: var(--color-accent);
+        }
+        h1, .entry-title {
+            --ast-title-color: var(--color-accent) !important;
+        }
+    ');
+}
+add_action('wp_enqueue_scripts', 'astra_child_custom_title_styles', 15);
+
 // Shortcode para mostrar opiniones
 function mostrar_opiniones_shortcode( $atts ) {
     $args = shortcode_atts( array(
