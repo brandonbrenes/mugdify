@@ -4,6 +4,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die();
 }
 
+/*Quita el panel de admin */
+function quitar_barra_admin() {
+    show_admin_bar(false);
+}
+add_action('after_setup_theme', 'quitar_barra_admin');
+
 function astra_child_enqueue_styles() {
     // Enqueue the parent theme stylesheet
     wp_enqueue_style('astra-parent-style', get_template_directory_uri() . '/style.css');
@@ -14,13 +20,17 @@ function astra_child_enqueue_styles() {
         get_stylesheet_directory_uri() . '/assets/css/styles.css',
         ['astra-parent-style']
     );
+
+    // Cargar about.css solo cuando se use template-about.php
+    if (is_page_template('politicas-template.php')) {
+        wp_enqueue_style(
+            'astra-about-style',
+            get_stylesheet_directory_uri() . '/assets/css/politicas.css',
+            ['astra-parent-style']
+        );
+    }
 }
 add_action('wp_enqueue_scripts', 'astra_child_enqueue_styles');
-
-function quitar_barra_admin() {
-    show_admin_bar(false);
-}
-add_action('after_setup_theme', 'quitar_barra_admin');
 
 function astra_child_enqueue_scripts() {
     // Enqueue the child theme script

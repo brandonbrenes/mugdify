@@ -1,17 +1,24 @@
+.elementor-widget-hero_widget {
+    width: 100%;
+    position: relative;
+    flex: none !important;
+    align-self: auto !important;
+    max-width: 100%;
+}
+
+.hero-content h1{
+    color: var(--color-accent);
+}
+
 .custom-hero {
     position: relative;
     width: 100%;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
 }
 
-/* Las imágenes ya no necesitan estar absolutas */
 .hero-image {
     width: 100%;
     height: auto;
-    object-fit: cover;
     display: block;
 }
 
@@ -21,27 +28,30 @@
 
 .hero-image.mobile {
     display: none;
+    margin: auto;
+    max-width: 500px;
 }
 
 .hero-content {
     position: absolute;
     z-index: 2;
-    background-color: rgba(165, 94, 28, 0.9);
     color: #fffbe3;
     padding: 2rem;
-    border-radius: 20px;
-    max-width: 500px;
-    right: 5%;
-    top: 50%;
+    max-width: 588px;
+    right: 4%;
+    top: 65%;
     transform: translateY(-50%);
+    text-align: center;
 }
 
-/* Móvil */
-@media screen and (max-width: 1168px) {
-    .custom-hero{
-        height: 100vh;
-    }
+.hero-content p {
+  font-size: clamp(15px, 1.8vw + 0.5rem, 18px);
+  font-weight: 500;
+}
 
+
+
+@media screen and (max-width: 1325px) {
     .hero-image.desktop {
         display: none;
     }
@@ -51,11 +61,20 @@
     }
 
     .hero-content {
-        top: 5%;
+        top: 10%;
         left: 0;
         right: 0;
+        max-width: 400px;
         margin: auto;
         transform: none;
         text-align: center;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content{
+        max-width: 350px;
+        top: 10%;
     }
 }

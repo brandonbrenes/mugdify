@@ -11,13 +11,6 @@ if (!defined('ABSPATH')) exit;
 
 // Registrar los estilos CSS para los widgets
 function register_custom_widget_styles() {
-    // Estilos del Hero Widget
-    wp_enqueue_style(
-        'hero-widget-style',
-        plugin_dir_url(__FILE__) . 'hero/hero-widget.css',
-        [],
-        '1.0'
-    );
 
     // Estilos del FAQs Widget
     wp_enqueue_style(
@@ -31,11 +24,9 @@ add_action('wp_enqueue_scripts', 'register_custom_widget_styles');
 
 // Incluir los archivos PHP de los widgets y registrarlos
 function register_custom_elementor_widgets($widgets_manager) {
-    require_once(__DIR__ . '/hero/hero-widget.php');
     require_once(__DIR__ . '/faqs/faqs-widget.php');
 
     // Registrar los widgets personalizados
-    $widgets_manager->register(new \Elementor\Hero_Widget());
     $widgets_manager->register(new \Elementor\FAQS_Accordion_Widget());
 }
 add_action('elementor/widgets/register', 'register_custom_elementor_widgets');

@@ -1,0 +1,11 @@
+h1, h2, h3{
+    color: var(--color-accent);
+}
+
+p{
+    color: var(--primary)!important;
+}
+
+.container {
+    margin: 2rem;
+}
