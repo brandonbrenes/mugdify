@@ -202,170 +202,120 @@ Tarjetas de productos
 ----------------------
 */
 
-/* Contenedor de productos WooCommerce con flexbox */
-ul.products.columns-3 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem; /* Espacio entre productos */
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-/* Estilo para cada producto */
-ul.products.columns-3 li.product {
-  flex: 1 1 250px; /* Se adaptan desde 250px hacia arriba */
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-/* Contenedor principal de productos (mantén el existente) */
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-/* Tarjeta de producto */
-.product {
-    position: relative;
+/* Contenedor principal de productos - solo afecta a las tarjetas */
+ul.products li.product {
+    padding: 20px; /* Padding general para toda la tarjeta */
     background: #fff;
     border-radius: 12px;
-    overflow: hidden;
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
     border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-.product:hover {
+/* Efecto hover en la tarjeta */
+ul.products li.product:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-/* Imagen del producto con más padding */
-.product-img-container {
-    padding: 20px 20px 0 20px; /* Más padding arriba y laterales */
-}
-
-.product img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    border-radius: 8px;
+/* Contenedor de imagen con más padding */
+ul.products li.product .woocommerce-loop-product__link {
     display: block;
+    padding: 15px 15px 0 15px; /* Padding superior y lateral */
+    margin-bottom: 15px;
 }
 
-/* Contenido de la tarjeta con más padding */
-.product-content {
-    padding: 20px; /* Padding uniforme */
-    padding-top: 0; /* Quitamos padding top porque la imagen ya lo tiene */
+/* Imagen del producto */
+ul.products li.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0;
 }
 
-/* Badge de "Sale!" */
-.onsale {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    background: #ff4757;
-    color: white;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: bold;
-    z-index: 2;
+/* Contenido textual con más espacio */
+ul.products li.product .woocommerce-loop-product__title {
+    padding: 0 15px;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    min-height: 40px;
+    line-height: 1.4;
 }
 
-/* Categorías del producto */
-.product-categories {
-    margin-bottom: 12px;
-    min-height: 20px;
+/* Categorías */
+ul.products li.product .product-categories {
+    padding: 0 15px;
+    margin-bottom: 8px;
 }
 
-.product-categories a {
+ul.products li.product .product-categories a {
     font-size: 12px;
-    color: #6e48aa;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    color: var(--color-accent);
     background: rgba(110, 72, 170, 0.1);
     padding: 4px 10px;
     border-radius: 12px;
     display: inline-block;
-    margin-right: 6px;
-    margin-bottom: 6px;
-}
-
-/* Título del producto */
-.product-title {
-    font-size: 17px;
-    margin: 0 0 12px;
-    font-weight: 600;
-    color: #2c3e50;
-    line-height: 1.4;
-    min-height: 48px;
-}
-
-.product-title a {
-    color: inherit;
-    text-decoration: none;
+    margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 /* Precio */
-.price {
-    display: block;
-    font-size: 19px;
+ul.products li.product .price {
+    padding: 0 15px;
+    color: var(--color-accent);
     font-weight: 700;
-    color: #6e48aa;
-    margin: 18px 0;
+    font-size: 18px;
+    margin: 15px 0;
 }
 
-.price del {
-    color: #95a5a6;
-    font-size: 15px;
-    margin-right: 8px;
+/* Estrellas de valoración */
+ul.products li.product .star-rating {
+    color: var(--color-accent);
+    padding: 0 15px;
+    margin-bottom: 10px;
 }
 
-.price ins {
-    text-decoration: none;
-}
-
-/* Botón "Add to cart" mejorado */
-.add_to_cart_button {
+/* Botón Add to Cart - ESTILO MEJORADO */
+ul.products li.product .add_to_cart_button {
     display: block;
-    width: calc(100% - 40px); /* Restamos el padding lateral */
-    margin: 0 20px 20px; /* Solo padding bottom */
+    width: calc(100% - 30px); /* Ajuste al padding */
+    margin: 0 15px 15px;
     padding: 12px;
-    background: #6e48aa;
+    background: var(--color-accent);
     color: white;
     border: none;
     border-radius: 8px;
     font-weight: 600;
     text-align: center;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 14px;
+    transition: all 0.2s ease;
 }
 
-.add_to_cart_button:hover {
+ul.products li.product .add_to_cart_button:hover {
     background: #7d5bbe;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(110, 72, 170, 0.2);
 }
 
-/* Ocultar botón de carrito superior */
-.added_to_cart {
+/* Ocultar el botón adicional del carrito */
+ul.products li.product .added_to_cart {
     display: none !important;
 }
 
-/* Categorías específicas */
-.product-categories .anime {
-    background: rgba(255, 159, 243, 0.2);
-    color: #d45ea8;
-}
-
-.product-categories .valentines-day {
-    background: rgba(255, 107, 107, 0.2);
-    color: #e74c3c;
+/* Badge de "Sale!" */
+ul.products li.product .onsale {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ff4757;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 2;
 }
 
 /*
