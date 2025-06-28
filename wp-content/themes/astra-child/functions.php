@@ -29,6 +29,14 @@ function astra_child_enqueue_styles() {
             ['astra-parent-style']
         );
     }
+
+    if (is_page_template('professional-profile-template.php')) {
+        wp_enqueue_style(
+            'astra-about-style',
+            get_stylesheet_directory_uri() . '/assets/css/professional-profile.css',
+            ['astra-parent-style']
+        );
+    }
 }
 add_action('wp_enqueue_scripts', 'astra_child_enqueue_styles');
 
