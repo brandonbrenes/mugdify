@@ -39,4 +39,4 @@ function custom_hero_shortcode() {
     <?php
     return ob_get_clean();
 }
-add_shortcode('custom-hero', 'custom_hero_shortcode');
+add_shortcode('custom-hero-shop', 'custom_hero_shortcode');
