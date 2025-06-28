@@ -212,3 +212,45 @@ ul.products.columns-3 li.product {
   max-width: 100%;
   box-sizing: border-box;
 }
+
+/* Estilos para las opiniones */
+.opiniones-clientes {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.opiniones-clientes h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.lista-opiniones {
+    display: grid;
+    gap: 25px;
+}
+
+.opinion {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.opinion h3 {
+    margin: 0 0 10px;
+    color: #3498db;
+}
+
+.valoracion {
+    color: #f1c40f;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+}
+
+.contenido {
+    line-height: 1.6;
+    color: #34495e;
+}
