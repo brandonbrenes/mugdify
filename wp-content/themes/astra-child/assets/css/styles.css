@@ -246,7 +246,7 @@ Opiniones
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     width: calc(33.333% - 30px); /* 4 columnas */
-    min-height: 200px;
+    min-height: 300px;
     max-width: 200px;
     box-sizing: border-box;
 }
