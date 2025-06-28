@@ -196,15 +196,19 @@ input[type="submit"]:hover,
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra suave */
 }
 
-/*productos de woocomerse en home*/
-@media (max-width: 768px) {
-  ul.products.columns-3 {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
+/* Contenedor de productos WooCommerce con flexbox */
+ul.products.columns-3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Espacio entre productos */
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-@media (max-width: 480px) {
-  ul.products.columns-3 {
-    grid-template-columns: 1fr !important;
-  }
+/* Estilo para cada producto */
+ul.products.columns-3 li.product {
+  flex: 1 1 250px; /* Se adaptan desde 250px hacia arriba */
+  max-width: 100%;
+  box-sizing: border-box;
 }
