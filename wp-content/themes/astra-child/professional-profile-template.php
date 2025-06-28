@@ -14,7 +14,7 @@ get_header();
                 <div class="profile-image">
                     <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/imgs/profile-picture.jpg'); ?>" 
                          alt="Brandon Brenes Arias"
-                         onerror="this.src='<?php echo esc_url(get_template_directory_uri() . '/assets/imgs/profile-default.jpg'); ?>'">
+                         onerror="this.src='<?php echo esc_url(get_template_directory_uri() . '/assets/imgs/profile-picture.jpg'); ?>'">
                 </div>
                 <div class="profile-content">
                     <h1>Brandon Brenes Arias</h1>
