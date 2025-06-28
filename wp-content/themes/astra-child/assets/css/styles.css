@@ -270,13 +270,13 @@ Opiniones
 }
 
 /* Responsive */
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
     .opinion {
         width: calc(50% - 30px); /* 2 columnas */
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
     .opinion {
         width: 100%; /* 1 columna */
         min-height: auto;
