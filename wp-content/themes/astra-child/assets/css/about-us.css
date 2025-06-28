@@ -1,3 +1,10 @@
+/* Estilos generales */
+.about-mugdify {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -22,8 +29,8 @@
     opacity: 0.9;
 }
 
-/* Nuestra Historia */
-.our-story {
+/* Quienes Somos */
+.who-we-are {
     padding: 60px 0;
     background: #f9f9f9;
 }
@@ -43,29 +50,15 @@
     color: #7f8c8d;
 }
 
-.story-content {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.story-text {
-    flex: 1;
+.who-we-are-content {
+    max-width: 800px;
+    margin: 0 auto;
     font-size: 1.1rem;
 }
 
-.story-text p {
+.who-we-are-content p {
     margin-bottom: 20px;
-}
-
-.story-image {
-    flex: 1;
-}
-
-.story-image img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 /* Misión, Visión y Valores */
@@ -154,40 +147,58 @@
     margin-bottom: 10px;
 }
 
-/* Equipo */
-.team-section {
+/* Fundador */
+.founder-section {
     padding: 60px 0;
     background: white;
     text-align: center;
 }
 
-.team-section h2 {
+.founder-section h2 {
     margin-bottom: 40px;
 }
 
-.team-member {
-    max-width: 800px;
+.founder-card {
+    max-width: 600px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
     text-align: left;
     background: #f9f9f9;
-    padding: 30px;
+    padding: 25px;
     border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
 }
 
-.member-image {
-    flex: 0 0 250px;
+.founder-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.member-image img {
+.founder-image {
+    flex: 0 0 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #6e48aa;
+}
+
+.founder-image img {
     width: 100%;
-    border-radius: 8px;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
-.member-info h3 {
-    font-size: 1.8rem;
+.founder-card:hover .founder-image img {
+    transform: scale(1.1);
+}
+
+.founder-info h3 {
+    font-size: 1.5rem;
     color: #2c3e50;
     margin-bottom: 5px;
 }
@@ -200,16 +211,16 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .story-content {
-        flex-direction: column;
-    }
-    
-    .team-member {
+    .founder-card {
         flex-direction: column;
         text-align: center;
     }
     
-    .member-image {
+    .founder-image {
         margin-bottom: 20px;
+    }
+    
+    .mission-grid {
+        grid-template-columns: 1fr;
     }
 }

@@ -16,21 +16,17 @@ get_header();
         </div>
     </section>
 
-    <!-- Nuestra Historia -->
-    <section class="our-story">
+    <!-- Quienes Somos -->
+    <section class="who-we-are">
         <div class="container">
             <div class="section-header">
-                <h2>Nuestra Historia</h2>
-                <p>Mugdify nació de la pasión por combinar tecnología, diseño y productos de calidad</p>
+                <h2>Quiénes Somos</h2>
+                <p>Conoce más sobre nuestra empresa y lo que nos hace especiales</p>
             </div>
-            <div class="story-content">
-                <div class="story-text">
-                    <p>En la era digital actual, identificamos la necesidad de ofrecer una experiencia única de personalización de tazas que permita a los clientes expresar su creatividad de forma intuitiva.</p>
-                    <p>Fundada en 2025, Mugdify se ha convertido en la plataforma líder en Costa Rica para crear tazas personalizadas con nuestro innovador editor 2D y previsualización 3D.</p>
-                </div>
-                <div class="story-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mugdify-team.jpg" alt="Equipo Mugdify">
-                </div>
+            <div class="who-we-are-content">
+                <p>Mugdify es una tienda en línea especializada en tazas personalizadas con diseños únicos. A través de nuestro innovador editor visual 2D con previsualización 3D, los usuarios pueden diseñar sus propias tazas para regalar o uso personal.</p>
+                <p>Realizamos nosotros mismos las impresiones de las tazas bajo la técnica de sublimación de alta calidad, garantizando productos duraderos y vibrantes.</p>
+                <p>Nuestro objetivo es brindar una experiencia de compra única donde cada cliente pueda expresar su creatividad y obtener un producto que realmente represente su estilo.</p>
             </div>
         </div>
     </section>
@@ -94,20 +90,20 @@ get_header();
         </div>
     </section>
 
-    <!-- Equipo -->
-    <section class="team-section">
+    <!-- Fundador -->
+    <section class="founder-section">
         <div class="container">
-            <h2>Conoce al Fundador</h2>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brandon-brenes.jpg" alt="Brandon Brenes">
+            <h2>Nuestro Fundador</h2>
+            <a href="<?php echo esc_url(home_url('/perfil-profesional')); ?>" class="founder-card">
+                <div class="founder-image">
+                    <img src="https://dev-mugdify.pantheonsite.io/wp-content/uploads/2025/06/profile-picture.jpg" alt="Brandon Brenes - Fundador de Mugdify">
                 </div>
-                <div class="member-info">
+                <div class="founder-info">
                     <h3>Brandon Brenes</h3>
                     <p class="position">Fundador & CEO</p>
                     <p>Desarrollador Full Stack y diseñador con pasión por crear experiencias digitales únicas. Combinó sus habilidades técnicas y creativas para hacer realidad Mugdify.</p>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 </main>
