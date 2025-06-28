@@ -35,7 +35,7 @@
    CONTENEDOR DE IMAGEN (TAMAÑO REDUCIDO)
    ============================================= */
 .profile-image-wrapper {
-    flex: 0 0 280px; /* Ancho reducido */
+    flex: 0 0 180px; /* Ancho reducido */
     position: relative;
     overflow: hidden;
     border-radius: 6px;
