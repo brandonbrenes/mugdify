@@ -300,7 +300,7 @@ ul.products li.product .add_to_cart_button:hover {
 }
 
 /* Ocultar el botón adicional del carrito */
-ul.products li.product .added_to_cart {
+ul.products li.product .ast-on-card-button {
     display: none !important;
 }
 
