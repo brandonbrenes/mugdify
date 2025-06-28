@@ -219,14 +219,13 @@ Opiniones
 -----------------
 */
 
-/* Contenedor principal de opiniones */
+/* Contenedor principal */
 .opiniones-clientes {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
-/* Título de la sección */
 .opiniones-clientes h2 {
     text-align: center;
     margin-bottom: 40px;
@@ -234,74 +233,52 @@ Opiniones
     font-size: 2rem;
 }
 
-/* Contenedor flex para opiniones */
 .lista-opiniones {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end; /* Alineación de derecha a izquierda */
     gap: 30px;
 }
 
-/* Estilo de cada tarjeta rectangular */
+/* Tarjetas*/
 .opinion {
     background: var(--color-secundary);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: calc(25% - 30px); /* 4 columnas por defecto */
-    min-height: 250px;
-    display: flex;
-    flex-direction: column;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    width: calc(33.333% - 30px); /* 4 columnas */
+    min-height: 200px;
     box-sizing: border-box;
 }
 
-.opinion:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
-/* Estructura interna de la tarjeta */
+/* Contenido de la tarjeta */
 .opinion h3 {
-    margin: 0 0 15px;
+    margin: 0 0 12px;
     color: var(--color-accent);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .valoracion {
     color: var(--color-accent);
-    font-size: 1.4rem;
-    margin-bottom: 20px;
-    letter-spacing: 3px;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
 }
 
 .contenido {
-    line-height: 1.7;
+    line-height: 1.6;
     color: var(--color-primary);
-    margin-bottom: 0;
-    flex-grow: 1;
+    font-size: 0.95rem;
 }
 
-/* Responsive para diferentes tamaños de pantalla */
-@media (max-width: 1200px) {
-    .opinion {
-        width: calc(33.333% - 30px); /* 3 columnas */
-    }
-}
-
-@media (max-width: 900px) {
+/* Responsive */
+@media (max-width: 800px) {
     .opinion {
         width: calc(50% - 30px); /* 2 columnas */
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .opinion {
         width: 100%; /* 1 columna */
         min-height: auto;
-    }
-    
-    .lista-opiniones {
-        justify-content: center; /* Centrado en móviles */
     }
 }
