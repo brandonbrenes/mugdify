@@ -1,5 +1,5 @@
 /* =============================================
-   ESTILOS BASE COMPACTOS
+   ESTILOS PRINCIPALES CON FLEXBOX
    ============================================= */
 .professional-profile-container {
     max-width: 800px;
@@ -8,37 +8,41 @@
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* =============================================
-   DISEÑO COMPACTO DEL PERFIL
-   ============================================= */
 .profile-header {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    background: #ffffff;
+    flex-direction: column; /* Columna en móvil (imagen arriba) */
+    gap: 25px;
+    background: #fff;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 @media (min-width: 768px) {
     .profile-header {
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 30px;
+        flex-direction: row; /* Fila en desktop (imagen al lado) */
+        align-items: flex-start; /* Alineación al inicio */
+        gap: 30px;
     }
 }
 
 /* =============================================
-   IMAGEN MUCHO MÁS PEQUEÑA (200px de ancho)
+   CONTENEDOR DE IMAGEN FLEXIBLE
    ============================================= */
 .profile-image-wrapper {
-    flex: 0 0 200px; /* Ancho reducido a 200px */
-    min-width: 200px;
-    aspect-ratio: 3/4; /* Mantiene relación 3:4 */
+    flex: 0 0 150px; /* Tamaño fijo pequeño */
+    width: 150px;
+    height: 200px; /* Altura proporcional */
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin: 0 auto; /* Centrado en móvil */
+}
+
+@media (min-width: 768px) {
+    .profile-image-wrapper {
+        margin: 0; /* Quita centrado en desktop */
+    }
 }
 
 .rectangular-profile-image {
@@ -50,40 +54,41 @@
 }
 
 /* =============================================
-   CONTENIDO DE TEXTO COMPACTO
+   CONTENIDO DE TEXTO FLEXIBLE
    ============================================= */
 .profile-info {
-    flex: 1;
+    flex: 1; /* Ocupa todo el espacio restante */
+    min-width: 0; /* Permite que el texto se ajuste */
 }
 
 .profile-info h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #2c3e50;
     margin: 0 0 5px;
     font-weight: 600;
 }
 
 .profile-info h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #7f8c8d;
     font-weight: 400;
-    margin: 0 0 20px;
+    margin: 0 0 15px;
 }
 
 .profile-description p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.6;
     color: #34495e;
-    margin: 0 0 25px;
+    margin: 0 0 20px;
 }
 
 /* =============================================
-   ENLACES DE CONTACTO COMPACTOS
+   ENLACES DE CONTACTO
    ============================================= */
 .profile-contact {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 }
 
 .contact-link {
@@ -93,14 +98,11 @@
     color: #3498db;
     text-decoration: none;
     font-size: 0.9rem;
-    padding: 6px 10px;
-    border-radius: 4px;
-    background: rgba(52, 152, 219, 0.05);
-    transition: all 0.2s ease;
+    transition: opacity 0.2s;
 }
 
 .contact-link:hover {
-    background: rgba(52, 152, 219, 0.1);
+    opacity: 0.8;
 }
 
 .contact-link .dashicons {
@@ -108,35 +110,19 @@
 }
 
 /* =============================================
-   VERSIÓN MÓVIL EXTRA COMPACTA
+   AJUSTES PARA PANTALLAS MUY PEQUEÑAS
    ============================================= */
 @media (max-width: 480px) {
-    .professional-profile-container {
-        padding: 0 15px;
-        margin: 20px auto;
-    }
-    
     .profile-header {
         padding: 20px;
-        gap: 20px;
     }
     
     .profile-image-wrapper {
-        flex: 0 0 150px;
-        min-width: 150px;
-        margin: 0 auto;
+        width: 120px;
+        height: 160px;
     }
     
     .profile-info h1 {
-        font-size: 1.5rem;
-    }
-    
-    .profile-info h2 {
-        font-size: 1rem;
-    }
-    
-    .contact-link {
-        font-size: 0.85rem;
-        padding: 5px 8px;
+        font-size: 1.4rem;
     }
 }
