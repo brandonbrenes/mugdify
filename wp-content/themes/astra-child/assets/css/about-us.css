@@ -74,7 +74,7 @@
 }
 
 .mission-card {
-    background: var(--color-secundary);
+    background: #fff;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
@@ -123,7 +123,7 @@
 }
 
 .step {
-    background: var(--color-secundary);
+    background: white;
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
@@ -134,7 +134,7 @@
     width: 40px;
     height: 40px;
     background: var(--color-accent);
-    color: var(--color-secundary);
+    color: white;
     border-radius: 50%;
     line-height: 40px;
     font-weight: bold;
