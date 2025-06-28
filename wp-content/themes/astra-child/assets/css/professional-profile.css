@@ -1,113 +1,212 @@
-/* Professional Profile - Simple */
-.profile-hero {
-    padding: 4rem 0;
-    background: #f8f9fa;
-    min-height: calc(100vh - 200px);
-    display: flex;
-    align-items: center;
+/* =============================================
+   ESTILOS GENERALES
+   ============================================= */
+.professional-profile-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 30px;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
 }
 
-.profile-container {
-    max-width: 1200px;
-    margin: 0 auto;
+/* =============================================
+   CABECERA DEL PERFIL
+   ============================================= */
+.profile-header {
     display: flex;
     flex-direction: column;
+    gap: 50px;
     align-items: center;
-    gap: 3rem;
-    padding: 0 2rem;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
 }
 
-@media (min-width: 768px) {
-    .profile-container {
+@media (min-width: 992px) {
+    .profile-header {
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
+        padding: 60px;
     }
 }
 
-.profile-image {
-    flex: 0 0 300px;
-    border-radius: 8px;
+/* =============================================
+   CONTENEDOR DE IMAGEN RECTANGULAR
+   ============================================= */
+.profile-image-wrapper {
+    flex: 0 0 350px;
+    position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.profile-image img {
+.profile-image-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.rectangular-profile-image {
     width: 100%;
-    height: auto;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
     display: block;
+    transition: transform 0.5s ease;
 }
 
-.profile-content {
+.profile-image-wrapper:hover .rectangular-profile-image {
+    transform: scale(1.03);
+}
+
+/* =============================================
+   INFORMACIÓN DEL PERFIL
+   ============================================= */
+.profile-info {
     flex: 1;
+    padding: 20px 0;
 }
 
-.profile-content h1 {
-    font-size: 2.5rem;
-    margin: 0 0 0.5rem;
+.profile-info h1 {
+    font-size: 2.8rem;
     color: #2c3e50;
+    margin: 0 0 10px;
     font-weight: 700;
+    line-height: 1.2;
 }
 
-.profile-title {
-    font-size: 1.2rem;
+.profile-info h2 {
+    font-size: 1.6rem;
     color: #7f8c8d;
-    margin: 0 0 2rem;
-    font-weight: 500;
+    font-weight: 400;
+    margin: 0 0 30px;
+    position: relative;
+    display: inline-block;
 }
 
-.profile-bio {
-    font-size: 1.1rem;
-    line-height: 1.6;
+.profile-info h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 60px;
+    height: 3px;
+    background: #3498db;
+}
+
+.profile-description p {
+    font-size: 1.15rem;
+    line-height: 1.8;
     color: #34495e;
-    margin-bottom: 2rem;
+    margin: 0 0 40px;
 }
 
+/* =============================================
+   SECCIÓN DE CONTACTO
+   ============================================= */
 .profile-contact {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 20px;
 }
 
 .contact-link {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 12px;
     color: #3498db;
     text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 6px;
+    background: rgba(52, 152, 219, 0.1);
+    max-width: fit-content;
 }
 
 .contact-link:hover {
-    color: #2980b9;
+    color: #ffffff;
+    background: #3498db;
+    transform: translateX(5px);
 }
 
 .contact-link .dashicons {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     width: auto;
     height: auto;
 }
 
-/* Estilos para la imagen de perfil */
-.profile-image {
-    width: 250px;
-    height: 250px;
-    margin: 0 auto;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid #2c3e50;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+/* =============================================
+   EFECTOS Y ANIMACIONES
+   ============================================= */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.profile-image:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+.profile-header {
+    animation: fadeInUp 0.8s ease forwards;
 }
 
-.profile-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+.profile-image-wrapper {
+    animation: fadeInUp 0.8s ease 0.2s forwards;
+    opacity: 0;
+}
+
+.profile-info {
+    animation: fadeInUp 0.8s ease 0.4s forwards;
+    opacity: 0;
+}
+
+/* =============================================
+   RESPONSIVE DESIGN
+   ============================================= */
+@media (max-width: 768px) {
+    .professional-profile-container {
+        padding: 0 20px;
+        margin: 30px auto;
+    }
+    
+    .profile-header {
+        padding: 30px;
+    }
+    
+    .profile-info h1 {
+        font-size: 2.2rem;
+    }
+    
+    .profile-info h2 {
+        font-size: 1.3rem;
+    }
+    
+    .rectangular-profile-image {
+        height: 380px;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-image-wrapper {
+        flex: 0 0 100%;
+    }
+    
+    .rectangular-profile-image {
+        height: 320px;
+    }
+    
+    .profile-info h1 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-link {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
 }
