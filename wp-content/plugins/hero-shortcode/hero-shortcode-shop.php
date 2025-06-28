@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) exit; // Evitar acceso directo
 
 // Registrar el estilo del Hero
 function custom_hero_register_styles() {
-    wp_register_style('custom-hero-style', plugin_dir_url(__FILE__) . 'hero-widget.css');
+    wp_register_style('custom-hero-style', plugin_dir_url(__FILE__) . 'hero-widget-shop.css');
 }
 add_action('wp_enqueue_scripts', 'custom_hero_register_styles');
 
@@ -39,4 +39,4 @@ function custom_hero_shortcode() {
     <?php
     return ob_get_clean();
 }
-add_shortcode('custom-hero-shop', 'custom_hero_shortcode');
+add_shortcode('custom-hero', 'custom_hero_shortcode');
