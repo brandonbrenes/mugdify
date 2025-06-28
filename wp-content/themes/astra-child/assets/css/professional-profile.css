@@ -2,9 +2,9 @@
    ESTILOS GENERALES
    ============================================= */
 .professional-profile-container {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 25px;
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     color: #333;
 }
@@ -15,50 +15,46 @@
 .profile-header {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 40px;
     align-items: center;
     background: #ffffff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 @media (min-width: 992px) {
     .profile-header {
         flex-direction: row;
         align-items: flex-start;
-        padding: 60px;
+        padding: 40px;
     }
 }
 
 /* =============================================
-   CONTENEDOR DE IMAGEN RECTANGULAR
+   CONTENEDOR DE IMAGEN (TAMAÑO REDUCIDO)
    ============================================= */
 .profile-image-wrapper {
-    flex: 0 0 350px;
+    flex: 0 0 280px; /* Ancho reducido */
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-radius: 6px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    aspect-ratio: 3/4; /* Mantiene relación de aspecto original */
 }
 
 .profile-image-wrapper:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .rectangular-profile-image {
     width: 100%;
-    height: 450px;
+    height: 100%; /* Altura automática según relación de aspecto */
     object-fit: cover;
     object-position: center;
     display: block;
-    transition: transform 0.5s ease;
-}
-
-.profile-image-wrapper:hover .rectangular-profile-image {
-    transform: scale(1.03);
 }
 
 /* =============================================
@@ -66,22 +62,22 @@
    ============================================= */
 .profile-info {
     flex: 1;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 .profile-info h1 {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     color: #2c3e50;
-    margin: 0 0 10px;
+    margin: 0 0 8px;
     font-weight: 700;
     line-height: 1.2;
 }
 
 .profile-info h2 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #7f8c8d;
     font-weight: 400;
-    margin: 0 0 30px;
+    margin: 0 0 25px;
     position: relative;
     display: inline-block;
 }
@@ -90,17 +86,17 @@
     content: '';
     position: absolute;
     left: 0;
-    bottom: -10px;
-    width: 60px;
-    height: 3px;
+    bottom: -8px;
+    width: 50px;
+    height: 2px;
     background: #3498db;
 }
 
 .profile-description p {
-    font-size: 1.15rem;
-    line-height: 1.8;
+    font-size: 1.05rem;
+    line-height: 1.7;
     color: #34495e;
-    margin: 0 0 40px;
+    margin: 0 0 30px;
 }
 
 /* =============================================
@@ -109,31 +105,31 @@
 .profile-contact {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .contact-link {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     color: #3498db;
     text-decoration: none;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    padding: 10px 15px;
-    border-radius: 6px;
-    background: rgba(52, 152, 219, 0.1);
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background: rgba(52, 152, 219, 0.08);
     max-width: fit-content;
 }
 
 .contact-link:hover {
     color: #ffffff;
     background: #3498db;
-    transform: translateX(5px);
+    transform: translateX(3px);
 }
 
 .contact-link .dashicons {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     width: auto;
     height: auto;
 }
@@ -144,7 +140,7 @@
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(15px);
     }
     to {
         opacity: 1;
@@ -153,17 +149,7 @@
 }
 
 .profile-header {
-    animation: fadeInUp 0.8s ease forwards;
-}
-
-.profile-image-wrapper {
-    animation: fadeInUp 0.8s ease 0.2s forwards;
-    opacity: 0;
-}
-
-.profile-info {
-    animation: fadeInUp 0.8s ease 0.4s forwards;
-    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
 }
 
 /* =============================================
@@ -176,37 +162,42 @@
     }
     
     .profile-header {
-        padding: 30px;
+        padding: 25px;
+        gap: 30px;
     }
     
     .profile-info h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     
     .profile-info h2 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
     }
     
-    .rectangular-profile-image {
-        height: 380px;
+    .profile-image-wrapper {
+        flex: 0 0 220px;
     }
 }
 
 @media (max-width: 576px) {
-    .profile-image-wrapper {
-        flex: 0 0 100%;
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
     
-    .rectangular-profile-image {
-        height: 320px;
-    }
-    
-    .profile-info h1 {
-        font-size: 1.8rem;
+    .profile-info h2::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
     
     .contact-link {
-        font-size: 1rem;
-        padding: 8px 12px;
+        margin: 0 auto;
+    }
+    
+    .profile-image-wrapper {
+        flex: 0 0 180px;
+        width: 180px;
     }
 }
