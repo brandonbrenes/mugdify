@@ -1,7 +1,6 @@
 /* Estilos generales */
 .about-mugdify {
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    color: #333;
+    color: var(--color-secundary);
     line-height: 1.6;
 }
 
@@ -42,12 +41,12 @@
 
 .section-header h2 {
     font-size: 2.2rem;
-    color: #2c3e50;
+    color: var(--color-accent);
 }
 
 .section-header p {
     font-size: 1.2rem;
-    color: #7f8c8d;
+    color: #8d857f;
 }
 
 .who-we-are-content {
@@ -75,7 +74,7 @@
 }
 
 .mission-card {
-    background: #fff;
+    background: var(--color-secundary);
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
@@ -124,7 +123,7 @@
 }
 
 .step {
-    background: white;
+    background: var(--color-secundary);
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
@@ -135,7 +134,7 @@
     width: 40px;
     height: 40px;
     background: var(--color-accent);
-    color: white;
+    color: var(--color-secundary);
     border-radius: 50%;
     line-height: 40px;
     font-weight: bold;
