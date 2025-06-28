@@ -100,8 +100,8 @@ get_header();
                 </div>
                 <div class="founder-info">
                     <h3>Brandon Brenes</h3>
-                    <p class="position">Fundador & CEO</p>
-                    <p>Desarrollador Full Stack y diseñador con pasión por crear experiencias digitales únicas. Combinó sus habilidades técnicas y creativas para hacer realidad Mugdify.</p>
+                    <p class="position">Fundador & desarrollador</p>
+                    <p>Desarrollador Full Stack y diseñador con pasión por crear experiencias digitales únicas.</p>
                 </div>
             </a>
         </div>
