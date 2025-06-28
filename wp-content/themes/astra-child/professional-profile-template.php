@@ -12,16 +12,16 @@ get_header();
         <section class="profile-hero">
             <div class="profile-container">
                 <div class="profile-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/profile-picture.jpg" alt="Brandon Brenes Arias">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/imgs/profile-picture.jpg'); ?>" 
+                         alt="Brandon Brenes Arias"
+                         onerror="this.src='<?php echo esc_url(get_template_directory_uri() . '/assets/imgs/profile-default.jpg'); ?>'">
                 </div>
                 <div class="profile-content">
                     <h1>Brandon Brenes Arias</h1>
                     <p class="profile-title">Desarrollador Full Stack & Diseñador</p>
                     
                     <div class="profile-bio">
-                        <p>Soy un desarrollador full stack con un perfil dinámico y multidisciplinario. Me apasiona el diseño, la ciberseguridad, la administración de servidores y la programación en Java y Python. Actualmente estoy finalizando la carrera de Informática y Tecnología Multimedia en la Universidad de Costa Rica, donde he desarrollado habilidades que abarcan todo el ciclo de vida del software: desde el diseño UX/UI y la planificación en ingeniería de software, hasta la programación, el aseguramiento de la calidad (QA) y el despliegue en producción. Esta formación me ha permitido construir soluciones tecnológicas integrales y de calidad. Gracias a mi experiencia y enfoque versátil, puedo adaptarme y aportar valor en distintas áreas del diseño y desarrollo de software.
-
-                        </p>
+                        <p>Desarrollador con perfil dinámico y multidisciplinario. Apasionado por el diseño, la programación y la creación de soluciones tecnológicas integrales. Combino habilidades técnicas con visión creativa para desarrollar aplicaciones web y productos personalizados.</p>
                     </div>
                     
                     <div class="profile-contact">
